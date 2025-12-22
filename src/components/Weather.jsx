@@ -49,6 +49,7 @@ const search = async (city) => {
     console.log(data);
     const icon = data.weather[0].icon || "01d";
     setWeatherData({
+        discription:data.weather[0].main,
         humidity:data.main.humidity,
         windSpeed:data.wind.speed,
         temprature:Math.floor(data.main.temp),
@@ -86,6 +87,7 @@ useEffect(() => {search("delhi")}, []);
       </div>
 {weatherData?<>
     <img src={weatherData?.icon} alt="" className="weather-icon" />
+    <p className='description'>{weatherData?.discription}</p>
     <p className='temperature'>{weatherData?.temprature}°C</p>
     <p className='location'>{weatherData?.location}</p>
     <div className="weather-data">
