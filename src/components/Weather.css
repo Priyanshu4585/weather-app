@@ -78,3 +78,23 @@ line-height: 1;
     z-index: 0;
     overflow: hidden;
 }
+
+@media (max-width: 600px) {
+    .weather{
+        padding: 20px;
+    }
+    .temperature{
+        font-size: 50px;
+    }
+    .location{
+        font-size: 28px;
+    }
+    .description{
+        font-size: 22px;
+    }
+    .weather-data{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
